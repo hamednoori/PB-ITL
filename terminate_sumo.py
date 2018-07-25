@@ -16,66 +16,6 @@
 # ------------------------------------------------------------------------------------------------------------------------------
 #
 #
-
-
-
-
-
-from __future__ import division
-
-import os
-import ast
-import sys
-import subprocess
-import signal
-import socket
-import logging
-import thread
-import time
-import tempfile
-import math
-import random
-import networkx as nx
-from collections import defaultdict, deque
-from math import log
-import sumolib
-from k_shortest_paths import k_shortest_paths
-from optparse import OptionParser
-from bs4 import BeautifulSoup
-from collections import defaultdict
-#import simpla
-from decimal import Decimal
-from collections import deque
-from heapq import heappush, heappop
-from itertools import count
-import networkx as nx
-import xml.etree.ElementTree as ET
-from networkx.utils import generate_unique_node
-junction_dictionary ={}
-TLS_List_xy={} 
-TLS_List = []
-junction_id =[]
-lane_length = {}
-lane_ITT = {}
-lane_CTT = {}
-lane_id=[]
-avgLengthall=0
-avgSpeedall=0
-dict_edgeRSUs={}
-dict_lane={}
-laneallgraph=[]
-edgeallgraph=[]
-edgeallsgraph=[]
-visit_bfs=[]
-dict_fc={}
-list_source={}
-list_present_network=[]
-list_vehicle_set_route=[]
-number_of_lane={}
-TMax=0
-footprintList =[]
-dict_footprint ={}
-
 def terminate_sumo(sumo):
     if sumo.returncode == None:
         os.kill(sumo.pid, signal.SIGTERM)
