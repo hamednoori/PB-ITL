@@ -41,6 +41,6 @@ def build_road_graph():
 	 for lane_t in lane_tag:
 	   lane_id = lane_t["id"]
 	   graphlane.add_edge(edge_from[edge_id].encode("ascii"), edge_to[edge_id].encode("ascii"), length= edges_length[edge_id], Edge = edge_id.encode("ascii"), speed = edges_speed[edge_id], Lane = lane_id.encode("ascii"), weight=0)
-	   print("edge_from= {0}    edge_to= {1}   speed= {2} length= {3}  Edge={4}   Lane={5} weight= 0 " .format(edge_from[edge_id].encode("ascii"), edge_to[edge_id].encode("ascii"), edges_speed[edge_id], edges_length[edge_id] , edge_id.encode("ascii"), lane_id.encode("ascii")))
+	   print("edge_from= {0}    edge_to= {1}   speed= {2} weight= {3}  Edge={4}   Lane={5} " .format(edge_from[edge_id].encode("ascii"), edge_to[edge_id].encode("ascii"), edges_speed[edge_id], edges_length[edge_id] , edge_id.encode("ascii"), lane_id.encode("ascii")))
 
     return graphlane
